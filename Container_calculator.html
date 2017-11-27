@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Container_calculator</title>
+
+
+  <script type="text/javascript">
+function calculus() {
+w=document.calc.Width.value
+l=document.calc.Length.value
+h=document.calc.Height.value
+var x=document.getElementById("container1").selectedIndex;
+
+switch (x)
+{
+case 0:
+w1=2,350
+l1=5,896
+hh1=2,385
+break
+case 1:
+w1=2,350
+l1=12,035
+hh1=2,393
+break
+case 2:
+w1=2,294
+l1=11,577
+hh1=2,110
+break
+case 3:
+w1=2,347
+l1=12,056
+hh1=2,379
+break
+case 4:
+w1=2,350
+l1=12,035
+hh1=2,697
+break
+case 5:
+w1=2,347
+l1=13,582
+hh1=2,696
+break
+case 6:
+w1=2,352
+l1=13,556
+hh1=2,697
+break
+<!--Dry Freight end -->
+case 7:
+l1=5,430
+w1=2,286
+hh1=2,155
+break
+case 8:
+l1=5,451
+w1=2,290
+hh1=2,156
+break
+case 9:
+l1=11,577
+w1=2,294
+hh1=2,110
+break
+case 10:
+l1=11,577
+w1=2,294
+hh1=2,409
+break
+case 11:
+l1=11,578
+w1=2,280
+hh1=2,425
+break
+case 12:
+l1=13,102
+w1=2,294
+hh1=2,409
+break
+<!--Reefer Container end -->
+case 13:
+l1=5,935
+w1=2,398
+hh1=2,2327
+break
+case 14:
+l1=5,966
+w1=2,418
+hh1=2,286
+break
+case 15:
+l1=12,080
+w1=2,438
+hh1=2,103
+break
+case 16:
+l1=12,192
+w1=2,230
+hh1=1,986
+break
+case 17:
+l1=12,178
+w1=2,365
+hh1=1,943
+break
+case 18:
+l1=12,052
+w1=2,438
+hh1=6,172
+break
+<!--Flat tracks end -->
+case 19:
+l1=5,919
+w1=2,340
+hh1=2,286
+break
+case 20:
+l1=5,893
+w1=2,346
+hh1=2,353
+break
+case 21:
+l1=12,043
+w1=2,338
+hh1=2,272
+break
+case 22:
+l1=5,928
+w1=2,318
+hh1=2,257
+break
+<!--Open-tops end -->
+}
+x1=Math.floor(hh1/h)
+x2=Math.floor(w1/w)
+x3=Math.floor(l1/l)
+x22=Math.floor(w1/l)
+x23=Math.floor(l1/w)
+total1=x1*x2*x3
+total2=x1*x22*x23
+document.calc.result.value=total1
+}
+  </script>
+</head>
+
+
+<body>
+
+<br>
+
+<form method="post" name="calc"> Select
+type
+of container<br>
+
+  <select id="container1">
+  <option value="1">20 std Dry Freight</option>
+  <option value="2">40 std Dry Freight</option>
+  <option value="3">40 wide door Dry Freight</option>
+  <option value="4">40 high aluminium Dry Freight</option>
+  <option value="5">40 high steel Dry Freight</option>
+  <option value="6">45 high steel Dry Freight</option>
+  <option value="7">45 high steel Dry Freight</option>
+  <option value="8">20 std aluminium Reefer Container</option>
+  <option value="9">20 std steel Reefer Container</option>
+  <option value="10">40 std Reefer Container</option>
+  <option value="11">40 high aluminium Reefer Container</option>
+  <option value="12">40 high steel Reefer Container</option>
+  <option value="13">45 high Reefer Container</option>
+  </select>
+
+  <br>
+
+  <br>
+
+Enter Dimensions of box in meters:<br>
+
+Width of box&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Length of
+box&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp; &nbsp;Height of box<br>
+
+  <input name="Width" value="0"> &nbsp; <input name="Length" value="0"> &nbsp; <input name="Height" value="0"><br>
+
+  <br>
+
+Max number of boxes in this container<br>
+
+  <input readonly="readonly" name="result" value="0"><br>
+
+  <br>
+
+  <input name="button" value="Calculate" onclick="calculus()" type="button"><br>
+
+  <br>
+
+</form>
+
+</body>
+</html>
